@@ -1,0 +1,380 @@
+{
+  "updatedAt": "2026-05-20T22:05:52.228Z",
+  "source": "LeekDuck via iScrapedDuck",
+  "event": {
+    "title": "Tapu Bulu and Mega Altaria in Raids",
+    "status": "ONGOING",
+    "url": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026",
+    "starts": "May 20, 2026, 6:00 AM",
+    "ends": "May 27, 2026, 6:00 AM"
+  },
+  "raids": [
+    {
+      "name": "Alolan Grimer",
+      "tier": "1-Star Raids",
+      "tierLabel": "1★",
+      "combatPower": {
+        "normal": {
+          "max": 785
+        },
+        "boosted": {
+          "max": 981
+        }
+      },
+      "weather": [
+        "Cloudy",
+        "Fog"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Clefairy",
+      "tier": "1-Star Raids",
+      "tierLabel": "1★",
+      "combatPower": {
+        "normal": {
+          "max": 660
+        },
+        "boosted": {
+          "max": 825
+        }
+      },
+      "weather": [
+        "Cloudy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Gible",
+      "tier": "1-Star Raids",
+      "tierLabel": "1★",
+      "combatPower": {
+        "normal": {
+          "max": 635
+        },
+        "boosted": {
+          "max": 794
+        }
+      },
+      "weather": [
+        "Windy",
+        "Sunny"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Wimpod",
+      "tier": "1-Star Raids",
+      "tierLabel": "1★",
+      "combatPower": {
+        "normal": {
+          "max": 286
+        },
+        "boosted": {
+          "max": 358
+        }
+      },
+      "weather": [
+        "Rainy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Klawf",
+      "tier": "3-Star Raids",
+      "tierLabel": "3★",
+      "combatPower": {
+        "normal": {
+          "max": 1373
+        },
+        "boosted": {
+          "max": 1716
+        }
+      },
+      "weather": [
+        "Partly Cloudy"
+      ],
+      "canBeShiny": null,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Piloswine",
+      "tier": "3-Star Raids",
+      "tierLabel": "3★",
+      "combatPower": {
+        "normal": {
+          "max": 1340
+        },
+        "boosted": {
+          "max": 1675
+        }
+      },
+      "weather": [
+        "Snow",
+        "Sunny"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Turtonator",
+      "tier": "3-Star Raids",
+      "tierLabel": "3★",
+      "combatPower": {
+        "normal": {
+          "max": 1270
+        },
+        "boosted": {
+          "max": 1587
+        }
+      },
+      "weather": [
+        "Sunny",
+        "Windy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Tapu Bulu",
+      "tier": "5-Star Raids",
+      "tierLabel": "5★",
+      "combatPower": {
+        "normal": {
+          "max": 1953
+        },
+        "boosted": {
+          "max": 2442
+        }
+      },
+      "weather": [
+        "Sunny",
+        "Cloudy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Mega Altaria",
+      "tier": "Mega Raids",
+      "tierLabel": "M",
+      "combatPower": {
+        "normal": {
+          "max": 1145
+        },
+        "boosted": {
+          "max": 1432
+        }
+      },
+      "weather": [
+        "Windy",
+        "Cloudy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Tapu Bulu and Mega Altaria in Raids",
+        "eventUrl": "https://leekduck.com/raids/tapu-bulu-mega-altaria-may-2026"
+      }
+    },
+    {
+      "name": "Shadow Inkay",
+      "tier": "Shadow 1-Star Raids",
+      "tierLabel": "S1★",
+      "combatPower": {
+        "normal": {
+          "max": 529
+        },
+        "boosted": {
+          "max": 662
+        }
+      },
+      "weather": [
+        "Fog",
+        "Windy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Larvitar",
+      "tier": "Shadow 1-Star Raids",
+      "tierLabel": "S1★",
+      "combatPower": {
+        "normal": {
+          "max": 594
+        },
+        "boosted": {
+          "max": 743
+        }
+      },
+      "weather": [
+        "Partly Cloudy",
+        "Sunny"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Sableye",
+      "tier": "Shadow 1-Star Raids",
+      "tierLabel": "S1★",
+      "combatPower": {
+        "normal": {
+          "max": 843
+        },
+        "boosted": {
+          "max": 1054
+        }
+      },
+      "weather": [
+        "Fog"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Spheal",
+      "tier": "Shadow 1-Star Raids",
+      "tierLabel": "S1★",
+      "combatPower": {
+        "normal": {
+          "max": 550
+        },
+        "boosted": {
+          "max": 687
+        }
+      },
+      "weather": [
+        "Snow",
+        "Rainy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Ninetales",
+      "tier": "Shadow 3-Star Raids",
+      "tierLabel": "S3★",
+      "combatPower": {
+        "normal": {
+          "max": 1302
+        },
+        "boosted": {
+          "max": 1628
+        }
+      },
+      "weather": [
+        "Sunny"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Onix",
+      "tier": "Shadow 3-Star Raids",
+      "tierLabel": "S3★",
+      "combatPower": {
+        "normal": {
+          "max": 629
+        },
+        "boosted": {
+          "max": 787
+        }
+      },
+      "weather": [
+        "Partly Cloudy",
+        "Sunny"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Primeape",
+      "tier": "Shadow 3-Star Raids",
+      "tierLabel": "S3★",
+      "combatPower": {
+        "normal": {
+          "max": 1307
+        },
+        "boosted": {
+          "max": 1634
+        }
+      },
+      "weather": [
+        "Cloudy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    },
+    {
+      "name": "Shadow Cresselia",
+      "tier": "Shadow 5-Star Raids",
+      "tierLabel": "S5★",
+      "combatPower": {
+        "normal": {
+          "max": 1633
+        },
+        "boosted": {
+          "max": 2041
+        }
+      },
+      "weather": [
+        "Windy"
+      ],
+      "canBeShiny": true,
+      "source": {
+        "eventTitle": "Shadow Cresselia May-June 2026",
+        "eventUrl": "https://leekduck.com/raids/shadow-cresselia-may-june-2026"
+      }
+    }
+  ]
+}
