@@ -1,28 +1,32 @@
 # Data source
 
-The parser reads LeekDuck raid data and publishes a stable JSON file for the iPhone widget.
+The iPhone widget reads prepared JSON from GitHub raw:
 
-## Main problem
+```text
+https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
+```
 
-`https://leekduck.com/raid-bosses/` can contain multiple raid event states:
+Scriptable does not scrape LeekDuck directly.
+
+## Source pages
+
+The parser uses:
+
+- `https://leekduck.com/raid-bosses/`
+- `https://leekduck.com/raids/manifest.json`
+- `https://leekduck.com/raids/<slug>.html`
+
+## Why manifest-first
+
+`/raid-bosses/` can involve multiple raid event states:
 
 - `ENDED`
 - `ONGOING`
 - `UPCOMING`
 
-The page URL does not necessarily change when the visible event changes. A naive parser can accidentally read an old or first grid instead of the active ongoing raid event.
+The URL may stay the same while the visible event changes. A naive parser can pick an outdated grid. iScrapedDuck selects the active `ONGOING` event from `/raids/manifest.json`, then parses that event's `/raids/<slug>.html` content.
 
-## Parser approach
-
-1. Fetch `https://leekduck.com/raid-bosses/` with normal Node `fetch`.
-2. Fetch `/raids/manifest.json`, select the active `ONGOING` event using LeekDuck-style date logic, and fetch `/raids/<slug>.html`.
-3. Fallback: search `/raid-bosses/` for `/raids/<slug>` links and surrounding `ONGOING` event blocks when present.
-4. Support current LeekDuck markup where the selected `ONGOING` event and raid grid are embedded directly on `/raid-bosses/`.
-5. Parse raid cards from the selected/current grid.
-6. Extract only stable widget fields.
-7. Refuse to write `data/raids.json` if no raid bosses were parsed.
-
-No Puppeteer, Playwright, Chromium, Selenium, or headless browser is used.
+HTML fallbacks are still kept for resilience.
 
 ## Used fields
 
@@ -34,12 +38,22 @@ No Puppeteer, Playwright, Chromium, Selenium, or headless browser is used.
 - `weather`
 - `canBeShiny`
 
-## Not used
+## Why `max` CP
+
+Raid encounters have fixed levels:
+
+- level 20 without weather boost
+- level 25 with weather boost
+
+So the max value of a LeekDuck CP range is the 15/15/15, 100% IV CP.
+
+## Not included
 
 - min CP
 - PvP IV
 - IV rank
-- DPS
-- TDO
+- DPS / TDO
 - movesets
 - counters
+- maps / scanners
+- account login or Pokémon GO automation

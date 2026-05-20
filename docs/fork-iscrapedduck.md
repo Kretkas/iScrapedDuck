@@ -1,33 +1,41 @@
-# Using this in iScrapedDuck
+# iScrapedDuck fork notes
 
-1. Fork `bigfoott/ScrapedDuck`.
-2. Add the lightweight parser from `scripts/scrape-raids.js` or adapt it into the fork's existing parser layout.
-3. Keep the implementation browserless:
-   - Node.js native `fetch`
-   - `cheerio`
-   - `fs` / `path`
-   - no Puppeteer, Playwright, Chromium, Chrome, Selenium, or headless browser
-4. Ensure the generated file is published as:
+This repository is a personal fork of `bigfoott/ScrapedDuck` focused on raid hundo CP data for a Scriptable iPhone widget.
 
-   ```text
-   data/raids.json
-   ```
+## What changed
 
-5. Check the raw URL:
+- `pages/raids.js` now selects the active `ONGOING` raid event before parsing bosses.
+- Raid output is written as an object with `updatedAt`, `source`, `event`, and `raids`.
+- `data.raids` contains only widget-needed hundo CP fields.
+- `scriptable/RaidHundoCP.js` reads the generated JSON from the `data` branch.
 
-   ```text
-   https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
-   ```
+## Parser constraints
 
-6. Add `.github/workflows/update-raids.yml`.
-7. Run the workflow manually with `workflow_dispatch`.
-8. Confirm logs show:
-   - `Found raid event links: N`
-   - `Found ONGOING candidates: N`
-   - `Selected event title: ...`
-   - `Selected event URL: ...`
-   - `Parsed raid bosses: N`
-   - `Output file: data/raids.json`
-9. Confirm future rotations select the new `ONGOING` event automatically.
+Allowed:
 
-If the parser cannot find the ongoing event or parses zero raids, it exits with an error and does not write an empty JSON file.
+- Node.js native `fetch`
+- `cheerio`
+- `fs` / `path`
+- plain HTML parsing
+
+Not allowed:
+
+- Puppeteer
+- Playwright
+- Chromium / Chrome
+- Selenium
+- any headless browser
+
+## Generated data
+
+Workflow output is published to the `data` branch:
+
+```text
+https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
+```
+
+## Failure behavior
+
+If the parser cannot find an ongoing event or parses zero raid bosses, it exits with an error and does not write an empty `raids.json`.
+
+The workflow validates raid JSON before pushing generated data.
