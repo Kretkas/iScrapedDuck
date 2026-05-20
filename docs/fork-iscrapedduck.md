@@ -1,4 +1,4 @@
-# Using this in a ScrapedDuck fork
+# Using this in iScrapedDuck
 
 1. Fork `bigfoott/ScrapedDuck`.
 2. Add the lightweight parser from `scripts/scrape-raids.js` or adapt it into the fork's existing parser layout.
@@ -16,7 +16,7 @@
 5. Check the raw URL:
 
    ```text
-   https://raw.githubusercontent.com/Kretkas/ScrapedDuck/data/raids.json
+   https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
    ```
 
 6. Add `.github/workflows/update-raids.yml`.

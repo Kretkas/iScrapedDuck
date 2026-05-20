@@ -1,6 +1,6 @@
-# ScrapedDuck fork — Raid Hundo CP Widget
+# iScrapedDuck — Raid Hundo CP Widget
 
-This fork keeps ScrapedDuck's general LeekDuck scraping, but replaces raid output with a stable JSON format for a personal iPhone Scriptable widget.
+This fork keeps iScrapedDuck's general LeekDuck scraping, but replaces raid output with a stable JSON format for a personal iPhone Scriptable widget.
 
 ## Goal
 
@@ -18,7 +18,7 @@ M  Mega Altaria 1145 / 1432
 Scriptable reads:
 
 ```text
-https://raw.githubusercontent.com/Kretkas/ScrapedDuck/data/raids.json
+https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
 ```
 
 The file format is:
@@ -26,7 +26,7 @@ The file format is:
 ```js
 {
   updatedAt: string,
-  source: 'LeekDuck via ScrapedDuck fork',
+  source: 'LeekDuck via iScrapedDuck',
   event: { title, status, url, starts, ends },
   raids: [
     {
@@ -70,4 +70,4 @@ See `docs/setup-ios.md` for step-by-step setup.
 
 ## Credits
 
-Raid data sourced from LeekDuck. Scraping approach based on ScrapedDuck. This fork is for personal use.
+Raid data sourced from LeekDuck. Scraping approach based on iScrapedDuck. This fork is for personal use.

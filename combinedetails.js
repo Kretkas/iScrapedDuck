@@ -89,8 +89,8 @@ function main()
 
 function generateCalendars(events) {
     const leekDuckFavIconUrl = "https://leekduck.com/assets/img/favicon/favicon-16x16.png";
-    const generatorName = "ScrapedDuck";
-    const generatorUrl = "https://github.com/bigfoott/ScrapedDuck";
+    const generatorName = "iScrapedDuck";
+    const generatorUrl = "https://github.com/Kretkas/iScrapedDuck";
     const icalMeta = [
         ["x-origin", "https://leekduck.com/events/"],
         ["x-generator", generatorName],
@@ -122,7 +122,7 @@ function generateCalendars(events) {
             description: `<a href="${e.link}">${e.name}</a>`,
             categories: [{ name: e.heading }],
             url: e.link,
-            organizer: { name: "LeekDuck c/o ScrapedDuck" },
+            organizer: { name: "LeekDuck c/o iScrapedDuck" },
             x: [
                 ["IMAGE", e.image],
                 ["X-GOOGLE-CALENDAR-CONTENT-TITLE", calEventTitle],

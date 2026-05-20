@@ -7,7 +7,7 @@ const RAID_BOSSES_URL = process.env.RAID_BOSSES_URL || `${BASE_URL}/raid-bosses/
 const RAID_MANIFEST_URL = process.env.RAID_MANIFEST_URL || `${BASE_URL}/raids/manifest.json`;
 const OUT_FILE = path.join(process.cwd(), 'files', 'raids.json');
 const OUT_MIN_FILE = path.join(process.cwd(), 'files', 'raids.min.json');
-const USER_AGENT = 'Mozilla/5.0 ScrapedDuck fork for personal Pokemon GO hundo widget';
+const USER_AGENT = 'Mozilla/5.0 iScrapedDuck for personal Pokemon GO hundo widget';
 
 function get() {
     return main().catch((err) => {
@@ -52,7 +52,7 @@ async function main() {
 
     const output = {
         updatedAt: new Date().toISOString(),
-        source: 'LeekDuck via ScrapedDuck fork',
+        source: 'LeekDuck via iScrapedDuck',
         event: stripInternalEventFields(event),
         raids: outputRaids
     };

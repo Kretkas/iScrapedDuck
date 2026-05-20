@@ -8,7 +8,7 @@
 6. In `CONFIG.DATA_URL`, set your fork raw URL:
 
    ```text
-   https://raw.githubusercontent.com/Kretkas/ScrapedDuck/data/raids.json
+   https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
    ```
 
 7. Run the script inside Scriptable.

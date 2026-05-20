@@ -1,5 +1,5 @@
 const CONFIG = {
-  DATA_URL: 'https://raw.githubusercontent.com/Kretkas/ScrapedDuck/data/raids.json',
+  DATA_URL: 'https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json',
   MAX_SMALL: 3,
   MAX_MEDIUM: 6,
   MAX_LARGE: 12,
