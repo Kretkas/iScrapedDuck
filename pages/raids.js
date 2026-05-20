@@ -437,11 +437,11 @@ function tierPriority(tier) {
     if (!shadow && t.includes('1')) return 1;
     if (!shadow && t.includes('3')) return 2;
     if (!shadow && t.includes('5')) return 3;
-    if (shadow && t.includes('1')) return 4;
-    if (shadow && t.includes('3')) return 5;
-    if (shadow && t.includes('5')) return 6;
-    if (t.includes('primal')) return 7;
-    if (t.includes('mega')) return 8;
+    if (t.includes('primal')) return 4;
+    if (t.includes('mega')) return 5;
+    if (shadow && t.includes('1')) return 6;
+    if (shadow && t.includes('3')) return 7;
+    if (shadow && t.includes('5')) return 8;
 
     return 99;
 }
