@@ -1,8 +1,8 @@
 const CONFIG = {
   DATA_URL: 'https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json',
-  MAX_SMALL: 3,
-  MAX_MEDIUM: 6,
-  MAX_LARGE: 12,
+  MAX_SMALL: 99,
+  MAX_MEDIUM: 99,
+  MAX_LARGE: 99,
   SHOW_TIER: true,
   SHOW_UPDATED_AT: true,
   REFRESH_HOURS: 1,

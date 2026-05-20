@@ -432,15 +432,16 @@ function dedupeBy(items, keyFn) {
 
 function tierPriority(tier) {
     const t = String(tier || '').toLowerCase();
+    const shadow = t.includes('shadow');
 
-    if (t.includes('primal')) return 1;
-    if (t.includes('mega')) return 2;
-    if (t.includes('shadow') && t.includes('5')) return 3;
-    if (t.includes('5')) return 4;
-    if (t.includes('shadow') && t.includes('3')) return 5;
-    if (t.includes('3')) return 6;
-    if (t.includes('shadow') && t.includes('1')) return 7;
-    if (t.includes('1')) return 8;
+    if (!shadow && t.includes('1')) return 1;
+    if (!shadow && t.includes('3')) return 2;
+    if (!shadow && t.includes('5')) return 3;
+    if (shadow && t.includes('1')) return 4;
+    if (shadow && t.includes('3')) return 5;
+    if (shadow && t.includes('5')) return 6;
+    if (t.includes('primal')) return 7;
+    if (t.includes('mega')) return 8;
 
     return 99;
 }
