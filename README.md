@@ -110,10 +110,14 @@ The parser refuses to write `files/raids.json` if it parses zero raid bosses.
 
 ## GitHub Actions
 
-The workflow runs on schedule and by `workflow_dispatch`. It writes generated files to the `data` branch, including:
+The workflow runs every 10 minutes and can also be started manually with `workflow_dispatch`.
+
+It uses GitHub-hosted Ubuntu, Node.js 24, and native `git push` to publish generated files to the `data` branch:
 
 - `raids.json`
 - `raids.min.json`
+
+Before publishing, the workflow runs `npm run check:raids` so empty or invalid raid data is not pushed.
 
 ## Credits
 

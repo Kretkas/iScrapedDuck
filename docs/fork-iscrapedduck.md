@@ -34,6 +34,8 @@ Workflow output is published to the `data` branch:
 https://raw.githubusercontent.com/Kretkas/iScrapedDuck/data/raids.json
 ```
 
+The workflow runs on GitHub-hosted Ubuntu with Node.js 24 and uses native `git push` to update the `data` branch. No third-party push action is required.
+
 ## Failure behavior
 
 If the parser cannot find an ongoing event or parses zero raid bosses, it exits with an error and does not write an empty `raids.json`.

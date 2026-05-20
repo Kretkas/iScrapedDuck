@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- CI now uses Node.js 24 GitHub actions and native `git push` for publishing the `data` branch.
+
 ## v1.0.0 - 2026-05-20
 
 Initial stable release of iScrapedDuck.
