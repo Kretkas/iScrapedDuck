@@ -1,21 +1,73 @@
-# ScrapedDuck
+# ScrapedDuck fork — Raid Hundo CP Widget
 
-ScrapedDuck routinely scrapes [LeekDuck.com](https://leekduck.com) (with permission) for Pokemon GO data and pushes said data to [a branch](https://github.com/bigfoott/ScrapedDuck/tree/data) on this repository for use by other external applications. If you plan to use this in your Pokemon GO related projects, please follow [the guidelines below](#for-developers).
+This fork keeps ScrapedDuck's general LeekDuck scraping, but replaces raid output with a stable JSON format for a personal iPhone Scriptable widget.
 
-To follow development progress for this tool, check out [the Trello board for PoGOEvents/ScrapedDuck](https://trello.com/b/32UjZbdu/pogoevents-scrapedduck).
+## Goal
 
-## For Developers
+Show current Pokémon GO raid bosses and only their 100% IV CP values:
 
-Developers, feel free to use this data for whatever project's you like! As long as your use of this data follows the terms below, you should be good!
+```text
+Raid Hundo CP
+5★ Tapu Bulu 1953 / 2442
+M  Mega Altaria 1145 / 1432
+1★ Gible 635 / 794
+```
 
-- Applications of the APIs cannot be hidden behind a paywall.
-- Applications of the APIs cannot be monetized with advertisements.
-- Give credit to ScrapedDuck and [LeekDuck.com](https://leekduck.com).
+## JSON URL
 
-I just want to emphasize again to credit **[LeekDuck.com](https://leekduck.com)**, as the data itself is provided by them.
+Scriptable reads:
 
-## Documentation
+```text
+https://raw.githubusercontent.com/Kretkas/ScrapedDuck/data/raids.json
+```
 
-All documentation is now available on the [wiki](https://github.com/bigfoott/ScrapedDuck/wiki).
+The file format is:
 
-For information about rate limits, please see [this page of the wiki](https://github.com/bigfoott/ScrapedDuck/wiki/Rate-Limits).
+```js
+{
+  updatedAt: string,
+  source: 'LeekDuck via ScrapedDuck fork',
+  event: { title, status, url, starts, ends },
+  raids: [
+    {
+      name,
+      tier,
+      tierLabel,
+      combatPower: {
+        normal: { max },
+        boosted: { max }
+      },
+      weather,
+      canBeShiny
+    }
+  ]
+}
+```
+
+## Why this fork
+
+LeekDuck's `/raid-bosses/` page can involve `ENDED`, `ONGOING`, and `UPCOMING` raid rotations. A simple server-side scrape of the first visible grid can pick the wrong rotation.
+
+This fork uses the lightweight LeekDuck raid manifest (`/raids/manifest.json`) to select the active `ONGOING` event, then fetches `/raids/<slug>.html` and parses the cards. It also has HTML fallbacks for `/raid-bosses/`.
+
+No Puppeteer, Playwright, Chromium, Selenium, or headless browser is used.
+
+## Local checks
+
+```bash
+npm install
+npm run scrape:raids
+npm run check:raids
+```
+
+The parser refuses to write `files/raids.json` if it parses zero raid bosses.
+
+## iPhone widget
+
+Copy `scriptable/RaidHundoCP.js` into Scriptable. The default `DATA_URL` already points to this fork's data branch URL.
+
+See `docs/setup-ios.md` for step-by-step setup.
+
+## Credits
+
+Raid data sourced from LeekDuck. Scraping approach based on ScrapedDuck. This fork is for personal use.

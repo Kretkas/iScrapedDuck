@@ -1,0 +1,24 @@
+{
+  "updatedAt": "2026-05-20T18:45:00.000Z",
+  "source": "LeekDuck via ScrapedDuck fork",
+  "event": {
+    "title": "Tapu Bulu and Mega Altaria in Raids",
+    "status": "ONGOING",
+    "url": "https://leekduck.com/raid-bosses/",
+    "starts": "May 20, 2026, 6:00 AM",
+    "ends": "May 27, 2026, 6:00 AM"
+  },
+  "raids": [
+    {
+      "name": "Tapu Bulu",
+      "tier": "5-Star Raids",
+      "tierLabel": "5★",
+      "combatPower": {
+        "normal": { "max": 1953 },
+        "boosted": { "max": 2442 }
+      },
+      "weather": ["Sunny", "Cloudy"],
+      "canBeShiny": true
+    }
+  ]
+}

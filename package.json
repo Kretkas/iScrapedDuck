@@ -6,13 +6,19 @@
   "scripts": {
     "scrape": "node ./scrape.js",
     "detailedscrape": "node ./detailedscrape.js",
-    "combinedetails": "node ./combinedetails.js"
+    "combinedetails": "node ./combinedetails.js",
+    "scrape:raids": "node -e \"require('./pages/raids').get()\"",
+    "check:raids": "node -e \"const fs=require('fs'); const data=JSON.parse(fs.readFileSync('files/raids.json','utf8')); if(!Array.isArray(data.raids)||!data.raids.length) throw new Error('raids missing/empty'); for (const r of data.raids) { if(!r.name) throw new Error('raid missing name'); if(r.combatPower?.normal?.max == null && r.combatPower?.boosted?.max == null) throw new Error('raid missing CP: '+r.name); } console.log('OK raids:', data.raids.length)\""
   },
   "author": "bigfoott",
   "license": "MIT",
   "dependencies": {
     "ical-generator": "^8.0.1",
     "jsdom": "21.1.1",
-    "moment": "latest"
+    "moment": "latest",
+    "cheerio": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
